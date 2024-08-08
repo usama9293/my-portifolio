@@ -3,6 +3,8 @@ import { Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import pf from "../assets/pf.jpg";
 import About from "./About";
+import "../App.css";
+import bg from "../assets/bg1.jpg"
 
 function Home() {
   return (
@@ -16,12 +18,18 @@ function Home() {
           height: "100vh",
           padding: { xs: "1rem", md: "0 2rem" },
           textAlign: { xs: "center", md: "left" },
+          background:
+            `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg}) center/cover no-repeat`, // Replace with your background image path
+          color: "white",
         }}
       >
         <Box
           sx={{
             maxWidth: { xs: "100%", md: "50%" },
             mb: { xs: 2, md: 0 },
+            opacity: 0,
+            transform: "translateX(100%)",
+            animation: "slideIn 1s forwards ease-in-out",
           }}
         >
           <Typography
