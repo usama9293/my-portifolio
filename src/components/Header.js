@@ -9,9 +9,8 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
-import { BoltRounded, FormatBold } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -47,7 +46,7 @@ function Header() {
   return (
     <>
       <AppBar
-        position="static"
+        position="fixed"
         sx={{ backgroundColor: "white", color: "black", padding: "10px 0" }}
       >
         <Toolbar>
@@ -57,8 +56,8 @@ function Header() {
             sx={{
               flexGrow: 1,
               fontWeight: "bold",
-              fontSize: "1.5rem", // Increase font size
-              fontFamily: '"Playfair Display", serif', // Example font family
+              fontSize: "1.5rem",
+              fontFamily: '"Playfair Display", serif',
             }}
           >
             My Portfolio
@@ -90,6 +89,7 @@ function Header() {
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         {drawer}
       </Drawer>
+      <Toolbar /> {/* To offset the content below the AppBar */}
     </>
   );
 }
