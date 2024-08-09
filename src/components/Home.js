@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import pf from "../assets/pf.jpg";
 import About from "./About";
 import "../App.css";
-import bg from "../assets/bg1.jpg"
+import bg from "../assets/bg1.jpg";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -18,8 +21,7 @@ function Home() {
           height: "100vh",
           padding: { xs: "1rem", md: "0 2rem" },
           textAlign: { xs: "center", md: "left" },
-          background:
-            `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg}) center/cover no-repeat`, // Replace with your background image path
+          background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg}) center/cover no-repeat`, // Replace with your background image path
           color: "white",
         }}
       >
@@ -82,6 +84,9 @@ function Home() {
         </Box>
       </Box>
       <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }
